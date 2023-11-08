@@ -34,7 +34,7 @@ end
 Tab:AddDropdown({
 	Name = "Choose How Much Skills To Dupe",
 	Default = "2",
-	Options = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "15", "20", "30", "40", "50", "100", "200"},
+	Options = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "15", "20", "30", "40", "50", "100", "200", "300"},
 	Callback = function(Value)
 		  DupeAmount = Value
 	end    
@@ -52,6 +52,29 @@ Tab:AddToggle({
 		wait(0.2)
 		end
    	end    
+})
+
+
+Tab:AddToggle({
+	Name = "Auto Removal",
+	Default = false,
+	Callback = function(Value)
+		  getgenv(). Remo = Value
+		
+		while getgenv(). Remo do
+		for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+if v.Name == "Removal" then
+local Item = v.Name
+v.Parent = game:GetService("Players").LocalPlayer.Character
+game:GetService("Players").LocalPlayer.Character:FindFirstChild(tostring(Item)):Activate()
+task.wait(3.5)
+game:GetService("Players").LocalPlayer.Character:FindFirstChild(tostring(Item)).Parent = game:GetService("Players").LocalPlayer.Backpack
+task.wait(3.5)
+task.wait(1)
+end
+end
+	end    
+	end
 })
 
 
