@@ -1,0 +1,164 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Blast Hub [Blood Surge Free Version]", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+--[[
+Name = <string> - The name of the UI.
+HidePremium = <bool> - Whether or not the user details shows Premium status or not.
+SaveConfig = <bool> - Toggles the config saving in the UI.
+ConfigFolder = <string> - The name of the folder where the configs are saved.
+IntroEnabled = <bool> - Whether or not to show the intro animation.
+IntroText = <string> - Text to show in the intro animation.
+IntroIcon = <string> - URL to the image you want to use in the intro animation.
+Icon = <string> - URL to the image you want displayed on the window.
+CloseCallback = <function> - Function to execute when the window is closed.
+]]
+
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+Tab:AddButton({
+	Name = "Dupe Skills",
+	Callback = function()
+      	  for i = 1, DupeAmount do
+game:GetService("ReplicatedStorage").MenuRemotes.LoadCharacter:FireServer(tostring(DupeAmount))
+end
+  	end    
+})
+
+
+Tab:AddDropdown({
+	Name = "Choose How Much Skills To Dupe",
+	Default = "2",
+	Options = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "15", "20", "30", "40", "50", "100", "200"},
+	Callback = function(Value)
+		  DupeAmount = Value
+	end    
+})
+
+
+Tab:AddToggle({
+	Name = "Auto Grip",
+	Default = false,
+	Callback = function(Value)
+		   getgenv(). Grip = Value
+		
+		while getgenv(). Grip do
+		game:GetService("ReplicatedStorage").RemoteEvents.Mobile.Grip:FireServer("Grip")
+		wait(0.2)
+		end
+   	end    
+})
+
+
+Tab:AddButton({
+	Name = "Get Skill Books (MUST SPAWN)",
+	Callback = function()
+      	  local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(1532.0128173828125, 43.821468353271484, -1645.9918212890625)
+wait(0.2)
+local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(1947.2750244140625, 31.70957374572754, -1742.963134765625)
+wait(0.4)
+local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(2067.399169921875, 31.744413375854492, -2049.773681640625)
+wait(0.5)
+local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(2020.8194580078125, 44.8864631652832, -2356.5361328125)
+wait(0.1)
+local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(2318.08154296875, 31.744413375854492, -1990.8126220703125)
+wait(0.2)
+local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(2361.16552734375, 31.744413375854492, -2232.165771484375)
+wait(0.3)
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Get Money On The Ground (MUST SPAWN)",
+	Callback = function()
+      	  local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(1949.950927734375, 31.694416046142578, -2203.071533203125)
+wait(0.1)
+local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(1949.9464111328125, 31.694416046142578, -2104.726318359375)
+wait(0.2)
+local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(1709.39794921875, 31.486520767211914, -1898.48681640625)
+wait(0.3)
+local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(1606.8402099609375, 31.486520767211914, -2012.7227783203125)
+wait(0.4)
+local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(2126.74462890625, 31.744413375854492, -2139.005615234375)
+wait(0.1)
+local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(1838.73291015625, 31.694416046142578, -1857.8759765625)
+wait(0.2)
+local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(1926.5313720703125, 31.70957374572754, -1858.228271484375)
+wait(0.3)
+local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(1612.896484375, 31.695205688476562, -2260.817138671875)
+wait(0.1)
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Arena 1",
+	Callback = function()
+      		local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(1933.1361083984375, 31.694408416748047, -2021.5955810546875)
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Arena 2",
+	Callback = function()
+      		local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(1766.6759033203125, 44.44845199584961, -2457.771728515625)
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Hospital",
+	Callback = function()
+      		local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(1652.314453125, 31.578781127929688, -1981.8773193359375)
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Reset Style And Sub Skill Place",
+	Callback = function()
+      		local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(1809.205810546875, 31.898895263671875, -1983.5714111328125)
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Scripter/Owner: Robloxblast"
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Key System/Co Owner: RoJav"
+})
