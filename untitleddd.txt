@@ -68,12 +68,13 @@ if getgenv(). Remo == false then break end
 local Item = v.Name
 v.Parent = game:GetService("Players").LocalPlayer.Character
 game:GetService("Players").LocalPlayer.Character:FindFirstChild(tostring(Item)):Activate()
-task.wait(2)
+task.wait(1.5)
 game:GetService("Players").LocalPlayer.Character:FindFirstChild(tostring(Item)).Parent = game:GetService("Players").LocalPlayer.Backpack
-task.wait(2)
+task.wait(1.5)
 end
 end
 	end    
+	end
 })
 
 
