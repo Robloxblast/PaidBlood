@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Blast Hub [Blood Surge Free Version]", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Blast Hub [Blood Surge Paid Version]", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --[[
 Name = <string> - The name of the UI.
@@ -108,6 +108,102 @@ local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
 rootPart.CFrame = CFrame.new(1612.896484375, 31.695205688476562, -2260.817138671875)
 wait(0.1)
   	end    
+})
+
+
+local Section = Tab:AddSection({
+	Name = "How Does This Inf Fame Work?"
+})
+
+local Section = Tab:AddSection({
+	Name = "Someone Must Not Be On Arena"
+})
+
+local Section = Tab:AddSection({
+	Name = "You Can Go To Lowest Server or Private Server"
+})
+
+
+Tab:AddToggle({
+	Name = "Inf Fame and Money",
+	Default = false,
+	Callback = function(Value)
+		  getgenv(). Fame = Value
+		
+		while getgenv(). Fame do
+		pcall(function()
+		local TweenService = game:GetService("TweenService")
+
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+
+{CFrame = CFrame.new(1928.117431640625, 31.694408416748047, -2021.10498046875)}):Play()
+local TweenService = game:GetService("TweenService")
+wait(0.1)
+
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+
+{CFrame = CFrame.new(1937.82470703125, 31.694408416748047, -2021.1849365234375)}):Play()
+wait(0.2)
+local TweenService = game:GetService("TweenService")
+
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+
+{CFrame = CFrame.new(1766.5938720703125, 44.44844055175781, -2450.611572265625)}):Play()
+wait(0.3)
+
+local TweenService = game:GetService("TweenService")
+
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+
+{CFrame = CFrame.new(1766.9268798828125, 44.44844055175781, -2465.572021484375)}):Play()
+wait(0.2)
+
+local TweenService = game:GetService("TweenService")
+
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+
+{CFrame = CFrame.new(1749.5421142578125, 44.44844055175781, -2465.585205078125)}):Play()
+wait(0.3)
+game:GetService("ReplicatedStorage").Respawn:FireServer()
+end)
+wait(1)
+end
+	end    
+})
+
+
+Tab:AddToggle({
+	Name = "Inf Fame and Money For Your Friends",
+	Default = false,
+	Callback = function(Value)
+		  getgenv(). Fam = Value
+		
+		while getgenv(). Fam do
+		pcall(function()
+		local TweenService = game:GetService("TweenService")
+
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(1937.7264404296875, 31.694408416748047, -2021.4793701171875)}):Play()
+wait(0.1)
+
+local TweenService = game:GetService("TweenService")
+
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+
+{CFrame = CFrame.new(1937.808349609375, 31.099613189697266, -2044.2261962890625)}):Play()
+wait(0.2)
+game:GetService("ReplicatedStorage").Respawn:FireServer()
+end)
+wait(1)
+end
+  end
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Teleport",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
 
 
