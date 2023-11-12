@@ -34,7 +34,7 @@ end
 Tab:AddDropdown({
 	Name = "Choose How Much Skills To Dupe",
 	Default = "2",
-	Options = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "15", "20", "30", "40", "50", "100", "200", "300"},
+	Options = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "15", "20", "30", "40", "50", "60", "70", "80", "90", "100", "200", "300"},
 	Callback = function(Value)
 		  DupeAmount = Value
 	end    
@@ -122,6 +122,9 @@ wait(0.2)
 local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
 rootPart.CFrame = CFrame.new(2361.16552734375, 31.744413375854492, -2232.165771484375)
 wait(0.3)
+local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootPart.CFrame = CFrame.new(1765.177978515625, 31.694416046142578, -2148.13623046875)
+wait(0.1)
   	end    
 })
 
