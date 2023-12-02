@@ -215,7 +215,7 @@ Tab:AddToggle({
 		local TweenService = game:GetService("TweenService")
 
 local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
-{CFrame = CFrame.new(299.9886779785156, 4.936333656311035, 172.5725555419922)}):Play()
+{CFrame = CFrame.new((299.6253356933594, 4.936334609985352, 187.6050262451172)}):Play()
 wait(0.1)
 
 game:GetService("ReplicatedStorage").Respawn:FireServer()
