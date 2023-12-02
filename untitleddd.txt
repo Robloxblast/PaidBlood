@@ -1,4 +1,4 @@
-  	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Blast Hub [Blood Surge Paid Version]", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --[[
@@ -157,7 +157,7 @@ local Section = Tab:AddSection({
 
 
 Tab:AddToggle({
-	Name = "Inf Fame and Money",
+	Name = "Inf Fame and Money For Your Friends Too",
 	Default = false,
 	Callback = function(Value)
 		  getgenv(). Fame = Value
@@ -201,33 +201,6 @@ end)
 wait(1)
 end
 	end    
-})
-
-
-Tab:AddToggle({
-	Name = "Inf Fame and Money For Your Friends",
-	Default = false,
-	Callback = function(Value)
-		  getgenv(). Fam = Value
-		
-		while getgenv(). Fam do
-		pcall(function()
-		local TweenService = game:GetService("TweenService")
-
-local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
-{CFrame = CFrame.new(300.1352844238281, 4.936333656311035, 276.08306884765625)}):Play()
-wait(0.1)
-
-local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
-
-{CFrame = CFrame.new(299.6253356933594, 4.936334609985352, 187.6050262451172)}):Play()
-wait(0.2)
-
-game:GetService("ReplicatedStorage").Respawn:FireServer()
-end)
-wait(1)
-end
-  end
 })
 
 
